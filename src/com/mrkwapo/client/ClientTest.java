@@ -10,7 +10,7 @@ public class ClientTest {
         AccountHolder accountHolder = new AccountHolder(account);
         Thread t1 = new Thread(accountHolder);
         Thread t2 = new Thread(accountHolder);
-        t1.setName("Nate");
+        t1.setName("Leo");
         t2.setName("Tameka");
 
         t1.start();

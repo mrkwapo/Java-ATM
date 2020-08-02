@@ -1,7 +1,7 @@
 package com.mrkwapo.model;
 
 public class Account {
-    private int balance = 10_000;
+    private int balance = 6000;
 
     public int getBalance() {
         return balance;
@@ -12,6 +12,6 @@ public class Account {
     }
 
     public void deposit(int amount){
-        balance = balance - amount;
+        balance = balance + amount;
     }
 }
