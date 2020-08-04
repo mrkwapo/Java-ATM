@@ -13,14 +13,14 @@ public class AccountHolder implements Runnable{
     public void run() {
         for (int i = 1; i <= 4; i++) {
             makeWithdrawl(2000);
-            makeDeposit(600);
+            //makeDeposit(600);
             if(account.getBalance() < 0) {
                 System.out.println("You're account is overdrawn!");
             }
         }
     }
 
-    private void makeWithdrawl(int withdrawAmount) {
+    private synchronized void makeWithdrawl(int withdrawAmount) {
         if (account.getBalance() >= withdrawAmount) {
             System.out.println(Thread.currentThread().getName() + " is going to withdraw $" + withdrawAmount + " from the Current Balance of " + account.getBalance());
             try{
